@@ -19,7 +19,7 @@ onMounted(async () => {
     <div v-else class="w-full mb-20">
       <LogoutForm />
 
-      <h1 class="text-center text-2xl font-bold mb-4">User Management System</h1>
+      <h1 class="text-center md:text-2xl font-bold my-4">User Management System</h1>
 
       <div class="w-full mb-10">
         <CreateUserForm />
@@ -52,7 +52,7 @@ onMounted(async () => {
         </v-alert>
   
       </div>
-      <div class="grid grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <UserCard v-for="user in userManagementStore.readUsers.data.users" :key="user.id" :user="user" />
       </div>
 

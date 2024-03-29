@@ -4,9 +4,11 @@ const base = useRuntimeConfig().public.apiHost
 <template>
   <div class="w-full min-h-screen flex">
     <section class="flex flex-col max-w-3xl m-auto space-y-2">
-      <h1 class="font-bold text-3xl text-center mb-4"> 
+      <h1 class="font-bold md:text-3xl text-center mb-4"> 
         Welcome to "fro-thiio" <br /> 
-        <span class="text-sm">(User Management System)</span> 
+        <span class="text-xs md:text-sm">
+          (User Management System)
+        </span> 
       </h1>
       <h2 class="font-semibold text-center">
         Register or login with

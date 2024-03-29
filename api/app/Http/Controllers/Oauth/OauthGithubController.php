@@ -17,7 +17,7 @@ class OauthGithubController extends Controller
     public function callback(Request $request)
     {
 
-        $githubUser = Socialite::driver('github')->user();
+        $githubUser = Socialite::driver('github')->stateless()->user();
         $user = User::where('email', $githubUser->getEmail())->first();
 
         if (!$user) {

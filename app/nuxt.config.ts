@@ -22,5 +22,5 @@ export default defineNuxtConfig({
       /* vuetify options */
     }
   },
-  devtools: { enabled: true }
+  devtools: { enabled: false }
 })
