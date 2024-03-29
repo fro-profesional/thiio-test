@@ -1,0 +1,21 @@
+meta {
+  name: delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{API_HOST}}/api/users
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{JWT}}
+}
+
+body:json {
+  {
+    "email": "test.1@email.com"
+  }
+}

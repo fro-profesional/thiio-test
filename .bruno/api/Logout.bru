@@ -1,0 +1,15 @@
+meta {
+  name: logout
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{API_HOST}}/api/logout
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Bearer {{JWT}}
+}

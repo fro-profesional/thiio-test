@@ -1,0 +1,8 @@
+{
+    "scripts": {
+        "env:local": "cp .env.local .env",
+        "env:prod": "cp .env.prod .env",
+        "deploy": "php artisan config:clear && php artisan config:cache && npx serverless deploy",
+        "clear": "npx serverless bref:cli --args='config:clear'"
+    }
+}
