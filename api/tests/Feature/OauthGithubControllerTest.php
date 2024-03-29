@@ -26,6 +26,8 @@ class OauthGithubControllerTest extends TestCase
         Socialite::shouldReceive('driver')
             ->with('github')
             ->andReturnSelf()
+            ->shouldReceive('stateless')
+            ->andReturnSelf()
             ->shouldReceive('user')
             ->andReturn(new class {
                 public function getEmail()

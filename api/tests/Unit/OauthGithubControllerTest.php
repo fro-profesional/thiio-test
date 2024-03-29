@@ -34,7 +34,7 @@ class OauthGithubControllerTest extends TestCase
         $gitHubUser->shouldReceive('getName')->andReturn('Test User');
 
         Socialite::shouldReceive('driver')->with('github')->andReturnSelf();
-        Socialite::shouldReceive('user')->andReturn($gitHubUser);
+        Socialite::shouldReceive('stateless')->andReturnSelf()->shouldReceive('user')->andReturn($gitHubUser);
 
         $userMock = Mockery::mock(User::class);
         $userMock->shouldReceive('where')->with('email', 'user@test.com')->andReturnSelf();
